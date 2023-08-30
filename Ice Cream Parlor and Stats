@@ -1,0 +1,31 @@
+Create an ice cream parlor database 
+
+CREATE TABLE Nieves (id INTEGER PRIMARY KEY, 
+item TEXT, cost INTEGER);
+
+INSERT INTO Nieves VALUES (1, "Fresa" , 5.00);
+INSERT INTO Nieves VALUES (2, "Coco", 5.00);
+INSERT INTO Nieves VALUES (3, "Limon", 5.00);
+INSERT INTO Nieves VALUES (4, "Vainilla", 5.00);
+INSERT INTO Nieves VALUES (5, "Chocolate",5.00);
+INSERT INTO Nieves VALUES (6, "Ron", 5.00);
+INSERT INTO Nieves VALUES (7, "Agua Limon",3.00);
+INSERT INTO Nieves VALUES (8, "Fresa",3);
+INSERT INTO Nieves VALUES (9, "Horchata",3);
+INSERT INTO Nieves VALUES (10, "Punch", 3);
+INSERT INTO Nieves VALUES (11, "Oreo", 5);
+INSERT INTO Nieves VALUES (12, "Snickers",5);
+INSERT INTO Nieves VALUES (13, "Twix", 5);
+INSERT INTO Nieves VALUES (14, "Reesees", 5);
+INSERT INTO Nieves VALUES (15, "Swirl", 5);
+
+SELECT item, SUM(cost) FROM Nieves
+
+--display the database ordered by price.
+SELECT * FROM Nieves
+ORDER BY cost
+
+--what us the sum of all items if each is sold once?
+SELECT item SUM(cost) FROM Nieves
+
+
